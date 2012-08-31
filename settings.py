@@ -8,6 +8,13 @@ ADMINS = (
 )
 
 MANAGERS = ADMINS
+DB_FILES = {
+    'db_table': 'FILES',
+    'fname_column':  'FILE_NAME',
+    'blob_column': 'BLOB',
+    'size_column': 'SIZE',
+    'base_url': 'http://localhost/dbfiles/'
+}
 
 DATABASES = {
     'default': {
@@ -120,12 +127,11 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
      'django.contrib.admindocs',
-     'database_files',
+     'storages',
      'attachments',
      'emails',
      'tags',
 )
-DEFAULT_FILE_STORAGE = 'database_files.storage.DatabaseStorage'
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
 # the site admins on every HTTP 500 error.
