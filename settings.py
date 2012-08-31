@@ -100,9 +100,10 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
 )
 
-ROOT_URLCONF = 'Sumomo.urls'
+ROOT_URLCONF = 'urls'
 
 TEMPLATE_DIRS = (
+    'templates',
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
@@ -119,11 +120,12 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
      'django.contrib.admindocs',
+     'database_files',
      'attachments',
      'emails',
      'tags',
 )
-
+DEFAULT_FILE_STORAGE = 'database_files.storage.DatabaseStorage'
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
 # the site admins on every HTTP 500 error.

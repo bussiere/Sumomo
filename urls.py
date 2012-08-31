@@ -7,7 +7,7 @@ admin.autodiscover()
 urlpatterns = patterns('',
     # Examples:
     # url(r'^$', 'Sumomo.views.home', name='home'),
-    url(r'^Sumomo/', include('Sumomo.foo.urls')),
+    url(r'^$', 'emails.views.index'),
 
     # Uncomment the admin/doc line below to enable admin documentation:
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
